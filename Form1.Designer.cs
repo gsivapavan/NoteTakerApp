@@ -37,6 +37,7 @@
             DeleteButton = new Button();
             NewNoteButton = new Button();
             SaveButton = new Button();
+            NoteTakerAppLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)PreviousNotes).BeginInit();
             SuspendLayout();
             // 
@@ -57,9 +58,9 @@
             // 
             // label1
             // 
-            label1.Location = new Point(457, 20);
+            label1.Location = new Point(457, 24);
             label1.Name = "label1";
-            label1.Size = new Size(327, 25);
+            label1.Size = new Size(327, 21);
             label1.TabIndex = 2;
             label1.Text = "Title:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -78,10 +79,10 @@
             PreviousNotes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             PreviousNotes.BackgroundColor = Color.White;
             PreviousNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            PreviousNotes.Location = new Point(2, 4);
+            PreviousNotes.Location = new Point(2, 33);
             PreviousNotes.Name = "PreviousNotes";
             PreviousNotes.RowHeadersWidth = 51;
-            PreviousNotes.Size = new Size(453, 327);
+            PreviousNotes.Size = new Size(453, 298);
             PreviousNotes.TabIndex = 4;
             PreviousNotes.CellDoubleClick += PreviousNotes_CellDoubleClick;
             // 
@@ -129,12 +130,22 @@
             SaveButton.UseVisualStyleBackColor = false;
             SaveButton.Click += SaveButton_Click;
             // 
+            // NoteTakerAppLabel
+            // 
+            NoteTakerAppLabel.BackColor = Color.LimeGreen;
+            NoteTakerAppLabel.Location = new Point(192, 2);
+            NoteTakerAppLabel.Name = "NoteTakerAppLabel";
+            NoteTakerAppLabel.Size = new Size(259, 25);
+            NoteTakerAppLabel.TabIndex = 9;
+            NoteTakerAppLabel.Text = "NoteTakerApp";
+            // 
             // NoteTaker
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Cyan;
             ClientSize = new Size(800, 450);
+            Controls.Add(NoteTakerAppLabel);
             Controls.Add(SaveButton);
             Controls.Add(NewNoteButton);
             Controls.Add(DeleteButton);
@@ -163,5 +174,6 @@
         private Button DeleteButton;
         private Button NewNoteButton;
         private Button SaveButton;
+        private Label NoteTakerAppLabel;
     }
 }
